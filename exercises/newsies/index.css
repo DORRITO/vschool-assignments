@@ -1,0 +1,13 @@
+p{
+    background-color: bisque;
+    border-color: bisque;
+    border-style: solid;
+    display: inline-block;
+    width: 30%;
+}
+
+
+img{
+    display: block;
+}
+

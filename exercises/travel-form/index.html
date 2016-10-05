@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="travel">
+            <label for="fname">First Name</label>
+            <input id= "fname" value="first name" name="fname" type="text"><br/>
+            <label for="lname">First Name</label>
+            <input id= "lname" value="last name" name="lname" type="text"><br/>
+            <label for="age">Age</label>
+            <input id= "age" value=0 name="age" type="number"><br/>           
+           
+            <label for="male">Male</label>
+            <input id= "male" name="gender" value="Male" type="radio"><br/>
+            <label for="female">Female</label>
+            <input id= "female" name="gender" value="Female" type="radio"><br/>
+            
+            <select name="flightPoints">
+                <option value=""></option>
+                <option value="Phoenix">Phoenix</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Russia">Russia</option>
+            </select><br/>
+            
+            <input type="checkbox" name="allergy" value="vegetarian"> vegetarian
+            <input type="checkbox" name="allergy" value="kosher" checked="checked"> kosher
+            <input type="checkbox" name="allergy" value="lactose"> lactose<br/>
+            <button onclick="plane()">Submit</button>
+            
+        </form>
+    <script src="index.js"></script>
+    </body>
+</html>

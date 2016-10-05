@@ -1,0 +1,60 @@
+@font-face {
+    font-family: mario;
+    src: url(SuperMario256.ttf);
+}
+
+.row > div{
+    border: 2px solid black;
+    height: 90px;
+}
+
+body{
+    float: left;
+    font-family: mario;
+    color: red;
+}
+
+h1{
+    color: red;
+    margin-left: 5%;
+}
+
+h2{
+    text-align: center;
+}
+h3{
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-top: 0px;
+}
+
+#yellow1, #yellow2{
+    background-color: yellow;
+}
+
+#yellow2{
+    height: 70px;
+}
+
+#red{
+    background-color: red;
+    height: auto;
+}
+
+#white{
+    background-color: white;
+    height: 180px;
+    text-align: center;
+}
+
+.mushroom{
+    max-height: 100%;
+    float: right;
+}
+
+.center-block {
+    display: block;
+    margin: 2% auto;
+    height: 260px;
+ }
+

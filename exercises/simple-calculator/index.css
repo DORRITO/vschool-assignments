@@ -1,0 +1,26 @@
+button{
+    width: 8%;
+    border-radius: 5px;   
+}
+
+form{
+    display: inline;
+}
+
+div{
+    display: inline;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.add{
+    background-color: #48B7F0;
+}
+
+.sub{
+    background-color: #51DE55;
+}
+
+.multiply{
+    background-color: #FFCF28;
+}

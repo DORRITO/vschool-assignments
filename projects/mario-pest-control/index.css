@@ -1,0 +1,61 @@
+body{
+    background-image: url("https://images5.alphacoders.com/445/thumb-1920-445906.jpg");
+    background-position: center; 
+}
+
+h1{
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+}
+
+section{
+    text-align: center;
+    display: block;
+    border-height: 22px;
+    vertical-align: center;
+}
+
+button{
+    font-weight: bold;
+    height: 25px;
+}
+
+form{
+    display: inline;
+}
+
+input{
+    height: 18px;
+    width: 35px;
+}
+
+div{
+    display: inline;
+    text-align: center;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.links{
+    background-color: rgba(247, 246, 186, .8);
+    margin: auto 10px;
+    border-style: solid;
+}
+.links:hover{
+    color: blue;
+}
+
+.baddies{
+    display: block;
+}
+
+.goomba-pic, .bomb-pic, .cheep-pic{
+    max-height: 20px;
+    margin-bottom: -7px;
+}

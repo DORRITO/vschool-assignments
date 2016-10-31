@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body ng-controller="myCtrl">
+
+    <div ng-repeat="kill in player.kills">
+        <h2>{{kill.handle}}</h2>
+        <h3>{{kill.rank}}</h3>
+        <span ng-repeat="clan in kill.clan"></span>
+        {{clan}}
+    </div>
+    
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+     <script src="index.js"></script>
+    </body>
+</html>

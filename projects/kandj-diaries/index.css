@@ -1,0 +1,117 @@
+/************************  Top navbar styling *********************/
+.navbar {
+    margin-bottom: 8%;
+    border-style: none;
+}
+
+#logo{
+    height: 140%      
+}
+/* try to align in the middle */
+#topText{
+        margin-left: 25%;
+}
+
+#topText a{
+    color: inherit;
+}
+
+}
+/* carousel */
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
+}
+
+
+/* header below picture */
+#pink{
+    height: 70px;
+    background-color: #FEE9DF;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#email{
+    float: none;
+    margin: 0 auto;
+}
+
+
+/*************** first blog spot **********/
+.noBlue{
+    color: inherit;
+    font-size: 36px;
+}
+.noBlue:hover{
+    color: #FEE9DF;
+}
+
+.noLink{
+    color: inherit;
+}
+.noLink:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#center{
+    text-align: center;
+}
+
+.grey{
+    color: grey;
+}
+
+hr{
+    width: 50%;
+}
+
+#pic1{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.tanHover{
+    color: inherit;
+}
+.tanHover:hover{
+    color: #FEE9DF;
+}
+
+.marginBot{
+    margin-bottom: 10px;
+}
+
+.noBorder{
+    border: none;
+    box-shadow: none!important;
+}
+
+#gap{
+    width: 100%;
+}
+
+.fourPics{
+    margin: auto -5px 10% -5px;
+}
+/************************** footer styling **************************/
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: relative;
+    left: 0px;
+    bottom: -5px;
+    height: 30px;
+    width: 100%;    
+}
+
+.botText{
+    display: inline;
+}
+
+#right{
+    float: right;
+}

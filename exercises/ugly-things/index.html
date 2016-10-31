@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body ng-controller="myCtrl">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2" id="box">
+                <div class="col-xs-4 topDown">
+                    <input class="form-control" ng-model="title" type="text" placeholder="Title" id="example-text-input">
+                </div>
+                <div class="col-xs-4 topDown">
+                    <input class="form-control" ng-model="img" type="url" placeholder="img URL" id="example-text-input">
+                </div>
+                <div class="col-xs-4 topDown">
+                    <input class="form-control" ng-model="desc" type="text" placeholder="Description" id="example-text-input">
+                </div>
+                <button type="submit" ng-click="infoSubmit()" class="btn btn-default center-block">Submit</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-block" ng-repeat="i in picArray">
+                <p class="text-center">{{i.title}}</p>
+                <img class="center-block" ng-src="{{i.img}}" />
+                <p class="text-center">{{i.desc}}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

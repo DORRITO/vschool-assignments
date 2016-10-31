@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>High Score Haven</title>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <form id="travel">
+            <label for="name">Name</label>
+            <input id= "name" value="Name" name="name" type="text"><br/>            
+            <label for="game">Game</label>
+            <input id= "game" value="Game" name="game" type="text"><br/>            
+            <label for="date">Date</label>
+            <input id= "date" value="Date" name="date" type="date"><br/>           
+            <label for="score">High score</label>
+            <input id= "score" value=0 name="age" type="number"><br/>  Include a trash talking message
+            <input id="trashTalk" type="checkbox" name="trashTalk" value="trashTalk">
+            <br/>
+        </form>
+        <button onclick="highScore()">Submit</button>
+        
+        <div id="tables"></div>
+        
+        
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+    </body>
+</html>

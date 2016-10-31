@@ -1,0 +1,12 @@
+#box{
+    background-color: deepskyblue;
+    height: 150px;
+}
+
+.topDown{
+    margin-top: 20px;
+}
+
+button{
+    margin-top: 13%;
+}

@@ -1,0 +1,96 @@
+{
+    "menu": [
+        {
+            "appetizers": [
+                {
+                    "app1": [
+                        {
+                            "name": "wings",
+                            "ingredient": ["hot", "mild"],
+                            "description": "hot wings"
+                        }
+                    ],               
+                    "app2": [
+                        {
+                            "name": "nachos",
+                            "ingredient": ["cheese", "jalepenos"],
+                            "description": "good nachos"
+                        }
+                    ]
+                }
+            ],
+            "cold sandwiches": [
+                {
+                    "cSandwich1": [
+                        {
+                            "name": "blt",
+                            "ingredient": ["bacon", "lettuce", "tomatoe"],
+                            "description": "best sandwich"
+                        }
+                    ],
+                    "cSandwich2": [
+                        {
+                            "name": "bmt",
+                            "ingredient": ["bacon", "meat", "tomatoe"],
+                            "description": "2nd best sandwich"
+                        }
+                    ]
+                }
+            ],
+            "hot sandwiches": [
+                {
+                    "hSandwich1": [
+                        {
+                            "name": "blt hot",
+                            "ingredient": ["bacon", "lettuce", "tomatoe"],
+                            "description": "best hot sandwich"
+                        }
+                    ],
+                    "hSandwich2": [
+                        {
+                            "name": "bmt hot",
+                            "ingredient": ["bacon", "meat", "tomatoe"],
+                            "description": "2nd best hot sandwich"
+                        }
+                    ]
+                }
+            ],
+            "desserts": [
+                {
+                    "dessert1": [
+                        {
+                            "name": "ice cream",
+                            "ingredient": ["vanilla", "chocolate"],
+                            "description": "cold"
+                        }
+                    ],
+                    "dessert2": [
+                        {
+                            "name": "ice cream sandwich",
+                            "ingredient": ["vanilla", "chocolate"],
+                            "description": "cold"
+                        }
+                    ]
+                }
+            ],
+            "drinks": [
+                {
+                    "drink1": [
+                        {
+                            "name": "soda",
+                            "ingredient": ["bubbly", "sugar"],
+                            "description": "bubbly drink"
+                        }
+                    ],
+                    "drink2": [
+                        {
+                            "name": "tea",
+                            "ingredient": ["water", "tea leaves"],
+                            "description": "soothing drink"
+                        }
+                    ]
+                }
+            ]   
+        }
+    ]
+}

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="MyApp">
+<html lang="en" ng-app="pokeApp">
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
     </head>
-    <body ng-controller="myCtrl">
+    <body ng-controller="mainCtrl">
+    <h1> enter pokemon number:</h1>
+    <form>
+        <input type="number" placeholder="Pokemon Number" ng-model="pokeNum">
+        <button type="button" ng-click="get-pokemon(pokeNum)">get</button>
+    </form>
     
+    <h2>{{ pokemon.name }}</h2>
+    attack: {{ pokemon.attack }}
+    ability: {{ pokemon.ability }}
     
-    name: {{ luke.name }}
-    hair color: {{ luke.hair_color }}
-    homeworld: {{luke.homeworld }}
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script scr="index.js"></script>
     </body>
 </html>

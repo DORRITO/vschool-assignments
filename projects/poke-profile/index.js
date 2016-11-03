@@ -1,65 +1,29 @@
-var app = angular.module("MyApp", []);
+var app = angular.module("pokeApp", []);
 
-// Goal - Display to the view Luke's:
-// name
-// hair color
-// eye color
-// homeworld name.
-
-app.service("StarWarsService", ["$http", function ($http) {
-    this.getLuke = function () {
-        var luke = {};
-
-        return $http.get("http://swapi.co/api/people/1/")
+app.service("pokemonService", ["$http", function($http) {
+    
+    this.getPokemonInfo = function(pokemonNumber) {
+        var baseUrl = "http://pokeapi.co";
+        var pokemon = {};
+        return $http.get(baseUrl + "/api/v1/pokemon/" + pokemonNumber)
             .then(function (response) {
-                luke.name = response.data.name;
-                luke.hairColor = response.data.hair_color;
-                luke.eyeColor = response.data.eye_color;
-                return $http.get(response.data.homeworld);
+                pokemon.name = repsonse.data.name;
+                pokemon.attack = response.data.attack;
+                pokemon.ability = response.data.abilities[0].name;
+                return $http.get(baseUrl + response.data.sprites[0].resources_url);
+            }).then(function(response) {
+                pokemon.image = baseUrl + response.data.image;
+                return pokemon;
             })
-            .then(function (response) {
-                luke.homeworld = response.data.name;
-                return $http.get(response.data.residents[1]);
-            })
-            .then(function (response) {
-                luke.neighbor = response.data.name;
-                return luke;
-            });
-    };
+    }
 }]);
 
-app.controller("MainController", ["$scope", "StarWarsService", function ($scope, StarWarsService) {
-
-    StarWarsService.getLuke()
-        .then(function (luke) {
-            $scope.luke = luke;
-        });
-
-
-    // Worst - callback hell and lots of work for the controller to do:
-    //        $http.get("http://swapi.co/api/people/1/")
-    //            .then(function (response) {
-    //                $scope.luke = response.data;
-    //                return $http.get(response.data.homeworld).then(function (response) {
-    //                    $scope.luke.homeworld = response.data.name;
-    //                    $http.get(response.data.residents[1]).then(function (response) {
-    //                        $scope.otherPerson = response.data.name;
-    //                    });
-    //                });
-    //            });
-
-    // Better - but controller is still doing too much work. Should do this inside the controller.
-    //        $http.get("http://swapi.co/api/people/1/")
-    //            .then(function (response) {
-    //                $scope.luke = response.data;
-    //                return $http.get(response.data.homeworld);
-    //            })
-    //            .then(function (response) {
-    //                $scope.luke.homeworld = response.data.name;
-    //                return $http.get(response.data.residents[1]);
-    //            })
-    //            .then(function (response) {
-    //                $scope.luke.neighbor = response.data.name;
-    //                return "Hello world";
-    //            });
-}]);
+app.controller("mainCtrl", ["$scope", "pokemonService", function($scope, $pokemonService) {
+    
+    $scope.getPokemon = function(pokemonNumber) {
+        pokemonService.getPokemonInfo(pokemonNumber)
+            .then(function(pokemon) {
+            $scope.pokemon = pokemon;
+        })
+    }
+}])

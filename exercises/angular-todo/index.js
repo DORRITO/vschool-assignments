@@ -11,7 +11,7 @@ app.controller("mainCtrl", ["$scope", "$http", function($scope, $http) {
     
     $scope.getTodos();
     
-    $scope.addTodo = function(){
+    $scope.addTodo = function() {
         var newTodo = {'title': $scope.newTodo, 'completed':false}
         $http.post("http://api.vschool.io/lance/todo", newTodo)
             .then(function(response) {
@@ -21,7 +21,16 @@ app.controller("mainCtrl", ["$scope", "$http", function($scope, $http) {
         $scope.todos.push(newTodo);
         $scope.newTodo = '';
     }
-    $scope.delete = function(id){
+    
+    $scope.update = function() {
+        $http.put("http://api.vschool.io/lance/todo/" + id)
+            .then(function(response) {
+            newTodo = response.data;
+        })
+    }
+    
+    
+    $scope.delete = function(id) {
         $http.delete("http://api.vschool.io/lance/todo/" + id)
             .then(function(response) {
             var deletedTodo = response.data;

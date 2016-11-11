@@ -1,49 +1,27 @@
-// dont understand body parser
-//dont undestand /name/:name  ':" placeholder meaning
-//can only have one get?
-//how to make "/" into "/somename"
+var app = angular.module("bountyApp", []);
 
-var express = require("express");
-var uuid = require("uuid");
-
-var app = express();
+app.controller("bountyController", ["$scope", "$http", function ($scope, $http)]) {
+    $scope.test = "hello world!";
 
 
-app.listen(3000, function() {
-    console.log("server is up on port 3000");
-});
+    $scope.getAllBounties = .service("HttpService", function ($http) {
+        this.getAllBounties = function () {
+            return http.get("/bounties")
+                .then(function (response) {
+                    return response.data;
+                })
+        }
+    })
 
-var id1 = uuid.v4();
-var id2 = uuid.v4();
-
-var bounty = [
-    {
-        name: "Jedi",
-        lName: "Surname",
-        living: true,
-        bounty: "10,000 credits",
-        type: "jedi",
-        id: id1
-    },
-    {
-        name: "Sith",
-        lName: "Surname",
-        living: false,
-        bounty: "10,000 credits",
-        type: "sith",
-        id: id2
+    HttpServie.getAllBounties()
+        .then(function (bounties) {
+            $scope.bounties = bounties;
+        })
+                                    
+    $scope.updateBounty = function () {
+        return $http.put("/bounties/" +updatedBounty.id, updatedBounty)
+            .then(function (response) {
+                return .data
+                                    })
     }
-]
-
-
-app.get('/', function(req, res) {
-//    res.send("hello world!");
-    res.send(bounty);
-});
-
-
-//app.post("/", function(req, res) {
-//    bounty.id = uuid.v4();
-//    bounty.push(//);
-//    res.send(bounty);
-//});
+}

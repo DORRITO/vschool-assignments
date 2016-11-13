@@ -15,8 +15,8 @@ app.controller("mainCtrl", ["$scope", "$http", function($scope, $http) {
         var newTodo = {'title': $scope.newTodo, 'completed':false}
         $http.post("http://api.vschool.io/lance/todo", newTodo)
             .then(function(response) {
-            newTodo = response.data;
-        })
+                newTodo = response.data;
+            })
            
         $scope.todos.push(newTodo);
         $scope.newTodo = '';

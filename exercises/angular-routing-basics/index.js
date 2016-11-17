@@ -1,11 +1,21 @@
 var app = angular.module("main", ["ngRoute"])
 
-.config(function($routeProvider){
-    $routeProvider.when('/one', {
-        controller: 'pageOneCtrl',
-        templateUrl: 'page-one/page-one.html'
-    }).when('/two',{
-        controller: 'pageTwo',
-        templateUrl: 'page-two/page-two.html'
+app.config(function ($routeProvider) {
+    
+    $routeProvider
+    
+    .when('/home', {
+        controller: 'home',
+        templateUrl: 'page-one/home.html'
+    })
+    
+    .when('/about', {
+        controller: 'about',
+        templateUrl: 'page-two/about.html'
+    })
+    
+    .when('/love', {
+        controller: 'love',
+        templateUrl: 'page-three/why-i-love.html'
     })
 })

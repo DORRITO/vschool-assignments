@@ -6,6 +6,7 @@ app.controller("mainCtrl", ["$scope", "$http", function($scope, $http) {
         $http.get("http://api.vschool.io/lance/todo")
             .then(function(response) {
             $scope.todos = response.data
+            console.log(data)
         })
     }
     

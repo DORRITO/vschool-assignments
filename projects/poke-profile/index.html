@@ -7,14 +7,15 @@
     </head>
     <body ng-controller="MainCtrl">
         
-        <h1>Enter a pokemon number:</h1>
+        <h1>Enter a pokemon number to catch!:</h1>
+        
         <form>
             <input type="number" placeholder="Pokemon" ng-model="pokeNum">
-            <button type="button" ng-click="get-pokemon(pokeNum)">Catch Pokemon</button>
+            <button type="button" ng-click="getPokemon(pokeNum)">Catch Pokemon</button>
         </form>
 
-        <h2>{{ pokemon.name }}</h2>
-        attack: {{ pokemon.attack }}
+        <h3>{{ pokemon.name }}:</h3>
+        attack #: {{ pokemon.attack }}<br />
         ability: {{ pokemon.ability }}
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>

@@ -24,6 +24,7 @@ app.service("pokemonService", ["$http", function($http) {
                     console.log(pokemon.attack)
                 pokemon.ability = response.data.abilities[0].name;
                     console.log(pokemon.ability)
+                return pokemon;
 //                return $http.get(baseUrl + response.data.sprites[0].resources_url);
            })
 //                        .then(function(response) {

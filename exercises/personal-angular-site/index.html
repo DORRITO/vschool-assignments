@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="MyApp">
+<html lang="en" ng-app="app">
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
     </head>
-    <body ng-controller="MyCtrl">
-    
-    
-    name: {{ luke.name }}
-    hair color: {{ luke.hair_color }}
-    homeworld: {{luke.homeworld }}
+    <!---->
+    <body>
+        
+        <navbar>
+            <a href="/#/people">People</a>
+            <a href="/#/ship">Ships</a>
+            <a href="/#/planet">Planet</a>
+        </navbar>
+        
+        <p>Hi! click something</p>
+        
+        <ng-view></ng-view>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>

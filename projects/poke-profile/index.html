@@ -1,21 +1,24 @@
+
 <!DOCTYPE html>
-<html lang="en" ng-app="pokeApp">
+<html lang="en" ng-app="PokeApp">
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
     </head>
-    <body ng-controller="mainCtrl">
-    <h1> enter pokemon number:</h1>
-    <form>
-        <input type="number" placeholder="Pokemon Number" ng-model="pokeNum">
-        <button type="button" ng-click="get-pokemon(pokeNum)">get</button>
-    </form>
+    <body ng-controller="MainCtrl">
+        
+        <h1>Enter a pokemon number:</h1>
+        <form>
+            <input type="number" placeholder="Pokemon" ng-model="pokeNum">
+            <button type="button" ng-click="get-pokemon(pokeNum)">Catch Pokemon</button>
+        </form>
+
+        <h2>{{ pokemon.name }}</h2>
+        attack: {{ pokemon.attack }}
+        ability: {{ pokemon.ability }}
     
-    <h2>{{ pokemon.name }}</h2>
-    attack: {{ pokemon.attack }}
-    ability: {{ pokemon.ability }}
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script scr="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+    <script src="index.js"></script>
     </body>
 </html>

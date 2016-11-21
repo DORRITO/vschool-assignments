@@ -28,7 +28,7 @@ app.service("StarWarsService", ["$http", function ($http) {
     };
 }]);
 
-app.controller("MainController", ["$scope", "StarWarsService", function ($scope, StarWarsService) {
+app.controller("MyCtrl", ["$scope", "StarWarsService", function ($scope, StarWarsService) {
 
     StarWarsService.getLuke()
         .then(function (luke) {

@@ -1,11 +1,21 @@
-var app = angular.module("pokeApp", []);
+var app = angular.module("PokeApp", []);
+
+app.controller("MainCtrl", ["$scope", "pokemonService", function($scope, $pokemonService) {
+    
+    $scope.getPokemon = function(pokemonNumber) {
+        pokemonService.getPokemonInfo(pokemonNumber)
+            .then(function(pokemon) {
+            $scope.pokemon = pokemon;
+        })
+    }
+}])
 
 app.service("pokemonService", ["$http", function($http) {
     
     this.getPokemonInfo = function(pokemonNumber) {
         var baseUrl = "http://pokeapi.co";
         var pokemon = {};
-        return $http.get(baseUrl + "/api/v1/pokemon/" + pokemonNumber)
+        return $http.get(baseUrl + "http://pokeapi.co/api/v1/pokemon/" + pokemonNumber)
             .then(function (response) {
                 pokemon.name = response.data.name;
                 pokemon.attack = response.data.attack;
@@ -18,12 +28,3 @@ app.service("pokemonService", ["$http", function($http) {
     }
 }]);
 
-app.controller("mainCtrl", ["$scope", "pokemonService", function($scope, $pokemonService) {
-    
-    $scope.getPokemon = function(pokemonNumber) {
-        pokemonService.getPokemonInfo(pokemonNumber)
-            .then(function(pokemon) {
-            $scope.pokemon = pokemon;
-        })
-    }
-}])

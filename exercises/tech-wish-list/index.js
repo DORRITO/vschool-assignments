@@ -1,39 +1,38 @@
 var app = angular.module("app", ["ngRoute"]);
 
+app.controller("Tech1", ["$scope", function($scope) {
+    
+    
+    $scope.name1 = "Alienware Computer";
+    $scope.price1 = "$200.95";  
+    
+    $scope.name2 = "Lightsaber";
+    $scope.price2 = "$2.95";
+       
+}]);
+
 app.config(function ($routeProvider) {
     
     $routeProvider.when('/tech1', {
-        controller: "People",
-        templateUrl: "pages/tech1.html"
+        controller: "Tech1",
+        templateUrl: "pages/tech1.tpl.html"
     }).when('/tech2', {
-        controller: "Ships",
-        templateUrl: "pages/tech2.html"
+        controller: "Tech1",
+        templateUrl: "pages/tech2.tpl.html"
     });
     
 })
 
-app.controller("Tech1", ["$scope", "$http", function($scope, $http) {
-    
-    $scope.getName = function() {
-    $http.get("http://swapi.co/api/people/1")
-        .then(function (response) {
-            $scope.person = response.data.name;
-            console.log($scope.person)
-        });
-    };   
-    $scope.getName();
-  
-}]);
+app.directive("tech1Directive", function() {
+    return {
+        restrict: 'E',
+        templateUrl: "pages/tech1Dir.tpl.html"
+    }   
+});
 
-app.controller("Tech2", ["$scope", "$http", function($scope, $http) {
-    
-    $scope.getName = function() {
-    $http.get("http://swapi.co/api/starships/5")
-        .then(function (response) {
-            $scope.ship = response.data.name;
-            console.log($scope.ship)
-        });
-    };   
-    $scope.getName();
-  
-}]);
+app.directive("tech2Directive", function() {
+    return {
+        restrict: 'E',
+        templateUrl: "pages/tech2Dir.tpl.html"
+    }
+});

@@ -16,6 +16,7 @@ var todos =
         }];
 
 //////////////////server responses//////////////// 
+
 app.get("/todos", function(req, res) {
     res.send(todos);
     console.log("Get todos worked");
@@ -38,17 +39,19 @@ app.post("/todos", function(req, res) {
     console.log("Post todo worked")
 });
 
-app.put("todos/:todosId", function(req, res) {
+app.put("/todos/:todosId", function(req, res) {
     for (var i = 0; i < todos.length; i++) {
         if (todos[i]._id === req.params.todosId) {
-            todos[i] = req.body;
+            for (key in req.body) {
+                todos[i][key] = req.body[key];
+            };
             res.send(todos);
         };
     };
     console.log("put worked");
 });
 
-app.delete("todos/:todosId", function(req, res) {
+app.delete("/todos/:todosId", function(req, res) {
     for (var i = 0; i < todos.length; i++) {
         if (todos[i]._id === req.params.todosId) {
             todos.splice(i, 1);

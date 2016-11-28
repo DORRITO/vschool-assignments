@@ -24,6 +24,7 @@ var puppies = [
 
 app.get("/puppies", function(req, res) {
     res.send(puppies);
+    console.log(puppies.length);
 });
 
 app.get("/puppies/:puppyId", function(req, res) {

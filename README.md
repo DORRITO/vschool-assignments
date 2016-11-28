@@ -1,0 +1,1 @@
+Exercises and projects chronicling a learning process from no experience in full MEAN stack through a 3 month learning process.

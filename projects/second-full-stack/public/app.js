@@ -19,6 +19,10 @@ app.config(["$routeProvider", function($routeProvider) {
             controller: "mainCtrl",
             templateUrl: "pages/contact.html"
         })
+        .when("/account", {
+            controller: "mainCtrl",
+            templateUrl: "pages/account.html"
+        })
         .when("/cart", {
             controller: "mainCtrl",
             templateUrl: "pages/cart.html"

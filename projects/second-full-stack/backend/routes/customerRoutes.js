@@ -4,6 +4,7 @@ var customerRoutes = express.Router();
 var customer = [
     {
         name: "customer 1",
+        etc: "more"
     }
 ];
 

@@ -1,0 +1,27 @@
+.form-control {
+    width: 180px;
+}
+
+.center-block {
+    width: 100px;
+}
+.hi{
+    margin-top: 100px;
+}
+
+h1 {
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#photo {
+    margin-right: 30px;
+}
+
+#condition {
+    margin-right: 30px;
+}
+
+#title {
+    margin-right: -8px;
+}

@@ -1,0 +1,20 @@
+<nav class="navbar navbar">
+    <div class="container-fluid" id="topNav">
+        <!-- Navbar left side -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/home">Home</a>
+            <a class="navbar-brand" href="#/browse">Pictures</a>
+            <a ng-show="UserService.isAuthenticated()" class="navbar-brand" href="#/new-photo">Request</a>
+<!--            <a class="navbar-brand" href="#/myphoto">My Photos</a>-->
+        </div>
+        <!-- Right side of the nav bar -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-hide="UserService.isAuthenticated()"><a href="#/login">Login</a></li>
+                <li ng-hide="UserService.isAuthenticated()"><a href="#/signup">Signup</a></li>
+                <li ng-show="UserService.isAuthenticated()"><a href="#/logout"><span class="glyphicon glyphicon-user"></span>Logout</a></li>       <li ng-show="UserService.isAuthenticated()"><a href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

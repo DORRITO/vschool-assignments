@@ -1,0 +1,80 @@
+.my-img {
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.my-fig {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fig-margin {
+    margin-bottom: 40px;
+}
+
+.first-fig {
+    margin-top: 15px;
+}
+
+.first-edit {
+    margin-top: 10px;
+}
+
+.my-photo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.center-block {
+    margin-bottom: 100px !important;
+}
+
+
+body {
+    color: white;
+}
+.my-container {
+    height: 100px;
+}
+
+.form-control {
+    display: inline;
+    width: 20%;
+    height: 25px;
+
+}
+
+.my-figure {
+    height: 490px;
+}
+
+.name-margin {
+    margin-right: -25px;
+}
+
+.value-margin {
+    margin-right: -28px;
+}
+
+.form-fix {
+    width: 100%;
+    height: 34px;
+
+}
+
+.margin-fix {
+    margin-bottom: 100px;
+}
+
+.footer {
+    padding-bottom: 76px;
+}
+
+/* carousel */
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
+}

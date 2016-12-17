@@ -1,0 +1,27 @@
+<div class="row hi">
+    <div class="col-md-4 col-md-offset-6">
+       <div class="col-md-8 col-md-offset-5">
+        <h1>Request a photo</h1>
+       </div>
+    </div>
+    <form>
+        <div class="col-md-8 col-md-offset-5">
+            <div class="form-group">
+                <label for="title">Photo Title</label>
+                <input type="text" ng-model="photo.photoName" id="title" class="form-control">
+            </div>
+            <div class ="form-group">
+                <label for="value">Photo offer</label>
+                <input type="number" ng-model="photo.photoValue" id="value" class="form-control">
+            </div>
+<!--
+            <div class="form-group">
+                <label for="image">Image name</label>
+                <input type="url" ng-model="photo.photoImageUrl"  id="image" class="form-control">
+            </div>                      
+-->
+            <br>
+            <button class="center-block btn btn-default btn-block" ng-click="addPhoto(photo)">Request</button>           
+        </div>
+    </form>
+    </div>

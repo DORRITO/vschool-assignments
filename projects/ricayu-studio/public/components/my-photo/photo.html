@@ -1,0 +1,41 @@
+<div class="row myPhotos">
+    <div ng-repeat="photo in myPhotos track by $index" class="col-xs-4 col-md-4 text-center">
+        <figure class="my-figure">
+            <img ng-src="{{ photo.photoImageUrl }}" alt="..." class="img1 img-circle">
+
+            <!--default text shown on page load-->
+
+            <div ng-if="!showEditableFields">
+                <figcaption class="my-photo first-fig">Name: {{ photo.photoName }}</figcaption>
+                <figcaption class="my-photo">Cost: {{ photo.photoValue | currency}}</figcaption>
+            </div>
+            <!--editable fields-->
+
+            <form  class="form-horizontal" ng-if="showEditableFields">
+                <div class="form-group first-edit">
+                    <label for="editName">Name: </label>
+                    <input class="form-control name-margin" id="editName" placeholder="{{photo.photoName}}"
+                           ng-model="myPhotos[$index].photoName">
+                </div>
+                <div class="form-group">
+                    <label for="editValue">Cost: </label>
+                    <input class="form-control value-margin" id="editValue" placeholder="{{photo.photoValue}}"
+                           ng-model="myPhotos[$index].photoValue">
+                </div>
+            </form>
+
+            <button ng-show="!showEditableFields" ng-click="showEditableFields = !showEditableFields"
+                    class="btn btn-default">Edit
+            </button>
+            <button ng-show="showEditableFields" ng-click="updatePhoto($index, myPhotos[$index]); showEditableFields = !showEditableFields"
+                    class="btn btn-default">Save
+            </button>
+            <button ng-show="showEditableFields" ng-click="showEditableFields = !showEditableFields" class="btn btn-danger">Discard Changes</button>
+            <button ng-show="!showEditableFields" ng-click="deletePhoto(myPhotos[$index])" class="btn btn-danger">Delete</button>
+        </figure>
+    </div>
+</div>
+
+
+<div class="row my-container"></div>
+

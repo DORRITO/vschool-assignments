@@ -23,7 +23,7 @@ app.use('/api/owner', require('./src/routes/owner-routes'));
 app.use('/shared', require('./src/routes/shared-routes'));
 
 app.use('/auth', require('./src/routes/auth-routes'));
-
+//
 
 app.listen(port, function() {
     console.log("port " + port);
